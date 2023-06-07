@@ -23,7 +23,7 @@ const AppProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setProducts(data);
+        setProducts(data.products);
       })
       .catch((error) => {
         console.log(error);
@@ -42,7 +42,7 @@ const AppProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setCarts(data);
+        setCarts(data.cartItems);
       })
       .catch((error) => {
         console.log(error);
@@ -99,7 +99,6 @@ const AppProvider = ({ children }) => {
         console.log(error);
       });
   };
-
 
   const valueToShare = {
     email,
